@@ -7,7 +7,7 @@ and this package adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.0] - 2026-10-12
+## [0.0.1] - 2026-10-12
 
 First release. A PHP SDK for Salsify's **ProductXM** API, usable from Laravel,
 Symfony or plain PHP.
@@ -61,6 +61,10 @@ Symfony or plain PHP.
 
 ### Notes
 
+- **The version is deliberately `0.0.1`.** The two sibling packages for
+  Monetico and Worldline Sips opened at `0.1.0`, but both could be measured
+  against a real platform. This one cannot be, yet, and the version number
+  says so rather than leaving the README to say it alone.
 - **Nothing in this release has been verified against the live Salsify API.**
   There is no public sandbox and API access is a licence option, so every
   request shape comes from Salsify's published reference and OpenAPI
@@ -73,5 +77,5 @@ Symfony or plain PHP.
   Content, SSO and user provisioning, OAuth 2.0, import mount points and file
   uploads, and any paginated `records()->all()`.
 
-[Unreleased]: https://github.com/xPiston/salsify/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/xPiston/salsify/releases/tag/v0.1.0
+[Unreleased]: https://github.com/xPiston/salsify/compare/v0.0.1...HEAD
+[0.0.1]: https://github.com/xPiston/salsify/releases/tag/v0.0.1
