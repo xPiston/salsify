@@ -1,0 +1,50 @@
+{
+    "name": "xpiston/salsify",
+    "description": "A PHP SDK for the Salsify ProductXM API: records, exports, imports and signed webhooks, for Laravel, Symfony or no framework at all.",
+    "keywords": ["salsify", "pim", "productxm", "product-information-management", "pxm", "laravel", "symfony", "webhooks"],
+    "homepage": "https://github.com/xPiston/salsify",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": "^8.2",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.1 || ^2.0"
+    },
+    "require-dev": {
+        "ext-zlib": "*",
+        "illuminate/support": "^12.0 || ^13.0",
+        "laravel/pint": "^1.18",
+        "nyholm/psr7": "^1.8",
+        "orchestra/testbench": "^10.0",
+        "php-http/discovery": "^1.19",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^11.5 || ^12.0",
+        "symfony/config": "^6.4 || ^7.0",
+        "symfony/dependency-injection": "^6.4 || ^7.0",
+        "symfony/http-client": "^6.4 || ^7.0",
+        "symfony/http-foundation": "^6.4 || ^7.0",
+        "symfony/http-kernel": "^6.4 || ^7.0"
+    },
+    "suggest": {
+        "php-http/discovery": "Finds the PSR-18 client and PSR-17 factories on its own, so nothing has to be wired.",
+        "ext-zlib": "Reads gzip-compressed export files without shelling out.",
+        "symfony/http-client": "A PSR-18 client.",
+        "guzzlehttp/guzzle": "A PSR-18 client."
+    },
+    "autoload": { "psr-4": { "Piston\\Salsify\\": "src/" } },
+    "autoload-dev": { "psr-4": { "Piston\\Salsify\\Tests\\": "tests/" } },
+    "config": { "sort-packages": true, "allow-plugins": { "php-http/discovery": true } },
+    "extra": { "laravel": { "providers": ["Piston\\Salsify\\Bridge\\Laravel\\SalsifyServiceProvider"] } },
+    "scripts": {
+        "lint": "pint",
+        "test:lint": "pint --test",
+        "analyse": "phpstan analyse --memory-limit=512M",
+        "test": "phpunit",
+        "quality": ["@test:lint", "@analyse", "@test"]
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
