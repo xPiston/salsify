@@ -7,6 +7,17 @@ and this package adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- **The development constraints now allow Laravel 13, Symfony 8 and
+  PHPUnit 13.** `composer.json` claimed support for Laravel 13, but
+  `orchestra/testbench: ^10.0` pinned the resolver to Laravel 12 - the major
+  of testbench follows the major of Laravel - so the `highest` CI job had
+  never once run against the version the package advertised. Symfony had to
+  come along with it, since Laravel 13 depends on Symfony 8. Nothing in
+  `require` moved: this is still PHP 8.2 and PSR interfaces, and no consumer's
+  resolution changes.
+
 ## [0.0.1] - 2026-10-12
 
 First release. A PHP SDK for Salsify's **ProductXM** API, usable from Laravel,
